@@ -1,0 +1,26 @@
+protoc -I=. --java_out=C:\Users\lekha\Downloads\demo\demo\src\main\java helloservice.proto
+ --plugin=protoc-gen-grpc-java=C:\Users\lekha\Downloads\protoc-gen-grpc-java.exe
+ --grpc-java_out=C:\Users\lekha\Downloads\demo\demo\src\main\java\com\example\demo\
+
+-I=proto file directory
+--java_out=output directory
+--plugin=same as above
+--grpc=output directory(can be different)
+run as admin
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+option java_generic_services = true;    
+
+message HelloRequest {
+    string firstName = 1;
+    string lastName = 2;
+}
+message HelloResponse {
+    string greeting = 1;
+}
+service HelloS {
+    rpc hello(HelloRequest) returns (HelloResponse);
+}
