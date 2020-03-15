@@ -1,6 +1,6 @@
-protoc -I=. --java_out=C:\Users\lekha\Downloads\demo\demo\src\main\java helloservice.proto
- --plugin=protoc-gen-grpc-java=C:\Users\lekha\Downloads\protoc-gen-grpc-java.exe
- --grpc-java_out=C:\Users\lekha\Downloads\demo\demo\src\main\java\com\example\demo\
+sudo protoc -I=. --java_out=/home/lekhnaganji/Downloads/weather-grpc-service/src/main/java/com/project/weather/grpc weatherCommunication.proto --plugin=protoc-gen-grpc-java=/home/lekhnaganji/Documents/protoc-gen-grpc-java.exe --grpc-java_out=/home/lekhnaganji/Downloads/weather-grpc-service/src/main/java/com/project/weather/grpc
+
+sudo chmod +x /home/lekhnaganji/Documents/protoc-gen-grpc-java.exe
 
 -I=proto file directory
 --java_out=output directory
