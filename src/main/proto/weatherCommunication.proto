@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+option java_generic_services = true;
+
+        message city {
+        string cityName = 1;
+        }
+
+        message weatherData {
+        float temperature = 1;
+        float pressure=2;
+        }
+
+        service weatherService {
+        rpc sendCity(city) returns (weatherData);
+        }
