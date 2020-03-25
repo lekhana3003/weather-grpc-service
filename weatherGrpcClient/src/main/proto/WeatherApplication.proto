@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+
+        package com.project.weather.grpc;
+        option java_multiple_files = true;
+
+
+
+        message City {
+        string cityName = 1;
+        }
+        message Temperature{
+        float tempValue=1;
+        }
+        message Pressure{
+        float pressValue=1;
+        }
+
+        message WeatherData {
+        Temperature temp=1;
+        Pressure press=2;
+        }
+        service WeatherService {
+        rpc SendCity(City) returns (WeatherData);
+        rpc SendTemperature(Temperature) returns (stream City);
+        rpc SendPressure(Pressure) returns (stream City);
+        }
