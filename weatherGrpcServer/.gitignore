@@ -1,5 +1,8 @@
 HELP.md
-target/
+target/classes/
+mvnw
+mvnw.cmd
+weatherServer.iml
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
 !**/src/test/**
